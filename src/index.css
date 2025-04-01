@@ -1,68 +1,347 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+@import "swiper/css/pagination";
+@import "swiper/css/scrollbar";
+@import "swiper/css";
+@import "swiper/css/effect-coverflow";
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@theme {
+  /* Font Sizes */
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-base: 16px;
+  --text-base--line-height: 19.5px;
+  --text-lg: 18px;
+  --text-lg--line-height: 21.94px;
+  --text-xl: 20px;
+  --text-xl--line-height: 24.38px;
+  --text-2xl: 24px;
+  --text-2xl--line-height: 29.26px;
+  --text-3xl: 28px;
+  --text-3xl--line-height: 50px;
+  --text-4xl: 48px;
+  --text-4xl--line-height: 58px;
+  --text-8xl: 96px;
+  --text-8xl--line-height: 106px;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Font Families */
+  --font-palanquin: "Palanquin", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+
+  /* Colors */
+  /*Main colors*/
+  --Red-bright: #950707;
+  --Red-light:#ffaa8e;
+
+  /*Dark Mode colors*/
+  --Black-Dark-1:#0a0a0a;
+  --Black-Dark-2:#232323;
+  --Black-Dark-3:#3a3a3a;
+  --Black-Ash:#888888;
+  --White:#ffffff;
+
+   /*White Mode colors*/
+  --white-OP-1: rgba(255, 255, 255, 0.8);
+  --White-Light-1:#ffeae6;
+  --white-Light-2:##ffafa3;
+
+
+/*Dark Mode colors*/
+--yellow:#FFD700;
+--white-bg:#F5F5F5;
+
+  --color-bg-night:#121212;
+  --color-blur: rgba(0, 0, 0, 0.05);
+  --color-red:rgba(0, 0, 0, 0.5);
+
+  --color-primary: #ECEEFF;
+  --color-coral-red: #FF6452;
+  --color-slate-gray: #6D6D6D;
+  --color-pale-blue: #F5F6FF;
+  --color-white-400: rgba(255, 255, 255, 0.80);
+
+  /* Box Shadows */
+  --shadow-3xl: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+  /* Background Images */
+  --bg-hero: url('assets/images/collection-background.svg');
+  --bg-card: url('assets/images/thumbnail-background.svg');
+
+  /* Screens */
+  --breakpoint-wide: 1440px;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/*
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+@layer base {
+  body {
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+    background: #0a0a0a;
+  }
+}*/
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .button-blur{
+    background: rgba( 208, 2, 27, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 208, 2, 27, 0.15 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+  }
+ 
+
+  .blur-layer{
+    background: var( --color-blur);
+    box-shadow: 0 8px 32px 0 var( --color-blur);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 6px );
+    
+  }
+  .blur-img{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+  
+.Gradient-button{
+
+  --border-angle: 0turn; 
+  --main-bg: conic-gradient(
+      from var(--border-angle),
+      #000000,
+      #000000 5%,
+      #000000 60%,
+      #000000 95%
+    );
+  
+  border: solid 2px transparent;
+  
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #fff, #fff 99%, transparent);
+  
+  background: 
+     /* padding-box clip this background in to the overall element except the border. */
+    var(--main-bg) padding-box,
+    /* border-box extends this background to the border space */
+    var(--gradient-border) border-box, 
+    /* Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background. */
+    var(--main-bg) border-box;
+  
+  background-position: center center;
+
+  animation: bg-spin 3s linear infinite;
+  animation-play-state: running;
+
+
+
+}
+.Gradient-button-stopped{
+
+  --border-angle: 0turn; 
+  --main-bg: conic-gradient(
+      from var(--border-angle),
+      #000000,
+      #000000 5%,
+      #000000 60%,
+      #000000 95%
+    );
+  
+  border: solid 2px transparent;
+  
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #fff, #fff 99%, transparent);
+  
+  background: 
+     /* padding-box clip this background in to the overall element except the border. */
+    var(--main-bg) padding-box,
+    /* border-box extends this background to the border space */
+    var(--gradient-border) border-box, 
+    /* Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background. */
+    var(--main-bg) border-box;
+  
+  background-position: center center;
+
+  animation: bg-spin 3s linear infinite;
+  animation-play-state: paused;
+
+
+
 }
 
-button {
+.Gradient-button-stopped:hover {
+  animation-play-state: running;
+}
+/* Prevent horizontal overflow caused by slick-slider */
+
+
+/* Add styles for the CSSTransition effect in your stylesheet */
+
+.form-transition-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.form-transition-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.form-transition-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.form-transition-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Popup card styling */
+.popup-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  z-index: 1000;
+  width: 300px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.popup-card button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+
+.Download-form-Btns{
+  @apply uppercase px-4 py-2 mb-5 mr-5 bg-transparent text-white/70 border rounded-xl font-semibold  hover:bg-white/10  hover:text-white transition duration-200;
+}
+.Download-checkbox{
+  @apply h-5 w-5 cursor-pointer border border-gray-300 mr-2 checked:accent-green-600 checked:border-green-600 focus:ring-2 focus:ring-green-900;
+}
+  .Button-icon{
+    @apply rounded-lg border-white  hover:bg-[var(--yellow)]/20  p-1
   }
-  a:hover {
-    color: #747bff;
+  .Navigation-Links{
+    @apply border-l-2 -skew-x-16 text-[var(--Black-Dark-1)] px-10 py-1 font-semibold border-[var(--Black-Dark-1)] transition duration-200  hover:text-black
+    dark:text-[var(--yellow)]   hover:bg-[var(--yellow)]/60  dark:hover:text-white dark:border-[var(--white-OP-1)]
   }
-  button {
-    background-color: #f9f9f9;
+  .Navigation-Mobile{
+    @apply border-l-2 border-t-1 border-b-1 text-xl -skew-x-16 text-[var(--yellow)]/90  font-semibold  border-[var(--yellow)]/80 pl-5 pr-20 py-5 hover:bg-white/90 hover:text-black transition duration-300
   }
+
+  .White-1{
+    @apply text-[var(--Black-Dark-1)] bg-[var(--White-Light-1)];
+  }
+
+  .dark-1{
+    @apply text-[var(--Black-Dark-01)];
+  }
+  .dark-2{
+    @apply text-[var(--color-red)];
+  }
+  .dark-3{
+    @apply text-[var(--color-red)];
+  }
+  .white-1{
+    @apply text-[var(--color-red)];
+  }
+  .white-2{
+    @apply text-[var(--color-red)];
+  }
+  .white-3{
+    @apply text-[var(--color-red)];
+  }
+
+
+
+}
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@utility padding {
+  @apply sm:px-16 px-8 sm:py-24 py-12;
+}
+
+@utility padding-x {
+  @apply sm:px-16 px-8;
+}
+
+@utility padding-y {
+  @apply sm:py-24 py-12;
+}
+
+@utility padding-l {
+  @apply sm:pl-16 pl-8;
+}
+
+@utility padding-r {
+  @apply sm:pr-16 pr-8;
+}
+
+@utility padding-t {
+  @apply sm:pt-24 pt-12;
+}
+
+@utility padding-b {
+  @apply sm:pb-24 pb-12;
+}
+
+@utility info-text {
+  @apply font-montserrat text-slate-gray text-lg leading-7;
 }
