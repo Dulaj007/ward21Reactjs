@@ -3,7 +3,8 @@
 # 🎮 **Ward21 Game Community Site** 🚀
 
 Welcome to the official site for **Ward21**, an immersive indie horror game set in an abandoned hospital in post-apocalyptic Sri Lanka! This site is created to showcase the game and gather feedback from the community. Explore, share your thoughts, and get involved! 😱💬
-You can view the live version of the site at: [ward21.info.gf](http://ward21.info.gf)
+
+#You can view the live version of the site at: [ward21.info.gf](http://ward21.info.gf)
 ---
 
 ## 🚀 **Tech Stack**
