@@ -21,11 +21,11 @@ const CommentCard: React.FC<CommentCardProps> = ({ comment }) => {
           <div className="flex flex-col justify-start items-start">
             <h3 className="text-white font-semibold">{comment.name}</h3>
             <small className="text-[10px] sm:text-[12px] text-gray-400 ">
-              {new Date(comment.timestamp).toLocaleString()}
+              {/* {new Date(comment.timestamp).toLocaleString()} */}
             </small>
           </div>
           {/* Email below Name */}
-          <p className="text-[12px] sm:text-[14px] text-gray-400 overflow-hidden">{comment.email}</p>
+          {/* <p className="text-[12px] sm:text-[14px] text-gray-400 overflow-hidden">{comment.email}</p> */}
 
           {/* Comment Content with Word Wrap and Overflow Handling */}
           <p className=" mt-2 w-50 text-gray-300 break-words whitespace-normal leading-relaxed text-[12px] sm:text-[14px]">

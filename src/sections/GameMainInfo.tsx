@@ -1,9 +1,50 @@
 
 import { Fade } from 'react-awesome-reveal';
+import Trailer from '../assets/Videos/Ward21Trailer.mp4';
+import { useEffect, useRef } from 'react';
 
 const GameMainInfo = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!video) return;
+        if (entry.isIntersecting) {
+          video.play().catch(() => {}); // Handle autoplay silently
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(video);
+
+    return () => {
+      if (video) observer.unobserve(video);
+    };
+  }, []);
+
   return (
     <div className="bg-[var(--white-bg)] dark:bg-black py-1 sm:py-10 px-10 md:px-50 font-montserrat ">
+        
+        {/* Video Trailer */}
+      <div className="flex justify-center items-center w-full py-5">
+        <video
+          ref={videoRef}
+          src={Trailer}
+          controls
+          controlsList="nodownload"
+          className="w-[80vw] max-w-[1280px] rounded-2xl shadow-xl"
+          preload="none"
+        />
+      </div>
+        
         <Fade direction="up" duration={1000}>
             <h1 className="relative sm:my-5 pt-10 my-1 uppercase tracking-[0.1em] max-[900px]:text-[30px] text-4xl text-black dark:text-white font-bold text-center">
               WARD 21

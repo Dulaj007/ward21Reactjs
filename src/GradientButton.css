@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+ *{
+  @apply transition-colors duration-200;
+ }
+@layer components {
+    .Gradient-button{
+
+        --border-angle: 0turn; 
+        --main-bg: conic-gradient(
+            from var(--border-angle),
+            #000000,
+            #000000 5%,
+            #000000 60%,
+            #000000 95%
+          );
+        
+        border: solid 2px transparent;
+        
+        --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #fff, #fff 99%, transparent);
+        
+        background: 
+           /* padding-box clip this background in to the overall element except the border. */
+          var(--main-bg) padding-box,
+          /* border-box extends this background to the border space */
+          var(--gradient-border) border-box, 
+          /* Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background. */
+          var(--main-bg) border-box;
+        
+        background-position: center center;
+      
+        animation: bg-spin 3s linear infinite;
+
+      }
+
+      
+      @property --border-angle {
+        syntax: "<angle>";
+        inherits: true;
+        initial-value: 0turn;
+      }
+}
+@keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }

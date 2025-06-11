@@ -4,6 +4,7 @@ import image3 from '../assets/images/img4.png';
 import image4 from '../assets/images/img24.png';
 import image5 from '../assets/images/img19.png';
 import image6 from '../assets/images/0.03.png';
+import image7 from '../assets/images/n4.png';
 
 export interface NewsItem {
     id: number;
@@ -61,6 +62,14 @@ export const NEWS_INFO = [
         subTitle: "Improved Stability, Multiple Endings, and a New Room!",
         description: "Ward 21 just got even better! The latest update addresses key bugs and improves overall stability. The save system has been updated, ensuring smoother progress tracking. Players can now experience multiple endings, making each playthrough more immersive and unpredictable. Additionally, a newly designed Doctor’s Office has been added, bringing more depth to the eerie hospital environment. Will you uncover its secrets? Jump in and explore the latest horrors!",
         image: image6
+    },
+       {
+        id: 7,
+        title: "Version 0.04 Update",
+        date: "2025-06-11",
+        subTitle: "Bug fixes, brightness tweaks, VFX balancing, and improved zombie animations.",
+        description: "This update brings several core improvements to enhance your gameplay experience. I've fixed known bugs that affected progression and performance, adjusted overall brightness for better visibility in dark areas, and fine tuned the visual effects for a more balanced horror atmosphere. Zombie animations have also been polished to deliver smoother, more realistic movements that heighten the fear factor. Thank you to everyone who shared feedback",
+        image: image7
     }
     
    
