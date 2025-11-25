@@ -19,7 +19,6 @@ const DeveloperMain: React.FC = () => {
     <div className='bg-white dark:bg-black py-10'>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center px-4">
         {/* Profile Section */}
-          
         <div className="flex-shrink-0">
         <Fade direction="down" duration={1000}>
           <div className="relative">
@@ -62,7 +61,7 @@ const DeveloperMain: React.FC = () => {
           <Fade direction="down" duration={1000}>
           <p className="mt-4 text-gray-700 dark:text-gray-300 px-6">{developer.Dis[2]}</p>
           </Fade>
-          {/* Developer Detailed Info */}
+
         
         </div>
         

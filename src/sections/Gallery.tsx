@@ -6,7 +6,7 @@ import Modal from 'react-modal';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-Modal.setAppElement('#root'); // Required for accessibility
+Modal.setAppElement('#root'); 
 
 const Gallery: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

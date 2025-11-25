@@ -83,15 +83,12 @@ const Nav: React.FC = () => {
             <ul className="flex flex-col items-right gap-10 font-bold ">
 
               {/* Home Link */}
-      <li key="home" className="Navigation-Mobile">
-      <Lottie animationData={SwipeRight} loop={true} className="absolute w-15 bottom-5 right-1" />
-        <Link to="/" className="font-montserrat leading-normal text-lg drop-shadow-lgs" onClick={toggleMenu}>
-          Home
-        </Link>
-      </li>
-
-  
-
+        <li key="home" className="Navigation-Mobile">
+        <Lottie animationData={SwipeRight} loop={true} className="absolute w-15 bottom-5 right-1" />
+          <Link to="/" className="font-montserrat leading-normal text-lg drop-shadow-lgs" onClick={toggleMenu}>
+            Home
+          </Link>
+        </li>
               {NAV_LINKS.map((item) => (
                 <li key={item.id} className="Navigation-Mobile">
                   <Lottie animationData={SwipeRight} loop={true} className="absolute w-15 bottom-5 right-1"  />

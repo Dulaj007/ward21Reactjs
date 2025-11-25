@@ -25,9 +25,10 @@ const Hero = ({ downloadRef }: { downloadRef: React.RefObject<HTMLDivElement> })
       }}
     >
       <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-[var(--white-bg)]  to-transparent pointer-events-none dark:hidden"></div>
+      
       {/* Overlay for Dark Mode & Opacity Effect */}
       <div className="absolute inset-0 bg-[var(--white-bg)] dark:bg-black opacity-30 dark:opacity-10"></div>
-  <Fade direction="up" duration={1000}>
+     <Fade direction="up" duration={1000}>
       <a href="/" className="relative z-5">
         <img
           className="pt-1 dark:hidden w-50 sm:w-60 md:w-80 lg:w-120"
@@ -41,6 +42,7 @@ const Hero = ({ downloadRef }: { downloadRef: React.RefObject<HTMLDivElement> })
         />
       </a>
       </Fade>
+
       {/* Hero Text */}
       <Fade direction="up" duration={1500}>
       <h1 className="relative text-[10px] sm:text-[12px] md:text-[15px] lg:text-[20px] font-montserrat uppercase tracking-[0.1em] text-black dark:text-white font-semibold">

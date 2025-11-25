@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { ref, push } from 'firebase/database';
-import { database } from '../firebaseConfig'; // Ensure this is your Firebase config file
+import { database } from '../firebaseConfig'; 
 import { DMCAInfo } from './DMCAInfo';
 
 interface ReportProps {
   title: string;
-  reportType: 'bugReports' | 'dmcaReports';  // Accept the type for dynamic table
+  reportType: 'bugReports' | 'dmcaReports';  
 }
 
 const ReportForm: React.FC<ReportProps> = ({ title, reportType }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { NEWS_INFO, NewsItem } from "../constants/News"; // Adjust path if needed
+import { NEWS_INFO, NewsItem } from "../constants/News"; 
 
 const NewsMain: React.FC = () => {
   return (
