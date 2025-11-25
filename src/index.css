@@ -74,21 +74,7 @@
   /* Screens */
   --breakpoint-wide: 1440px;
 }
-/*
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
 
-@layer base {
-  body {
-    font-family: "DM Sans", serif;
-    font-optical-sizing: auto;
-    background: #0a0a0a;
-  }
-}*/
 @layer components {
   .max-container {
     max-width: 1440px;
@@ -137,7 +123,7 @@
     var(--main-bg) padding-box,
     /* border-box extends this background to the border space */
     var(--gradient-border) border-box, 
-    /* Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background. */
+    /* Duplicate main background to fill in behind the gradient border.  */
     var(--main-bg) border-box;
   
   background-position: center center;
@@ -168,7 +154,7 @@
     var(--main-bg) padding-box,
     /* border-box extends this background to the border space */
     var(--gradient-border) border-box, 
-    /* Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background. */
+    /* Duplicate main background to fill in behind the gradient border. */
     var(--main-bg) border-box;
   
   background-position: center center;
@@ -183,10 +169,8 @@
 .Gradient-button-stopped:hover {
   animation-play-state: running;
 }
-/* Prevent horizontal overflow caused by slick-slider */
 
 
-/* Add styles for the CSSTransition effect in your stylesheet */
 
 .form-transition-enter {
   opacity: 0;

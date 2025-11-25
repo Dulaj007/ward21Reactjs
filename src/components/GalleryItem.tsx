@@ -1,5 +1,3 @@
-// src/components/GalleryItem.tsx
-
 import React from 'react';
 import { Screenshot } from '../constants/Screenshots';
 

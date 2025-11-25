@@ -1,7 +1,6 @@
 import React from 'react';
 import { NewsItem } from '../constants/News';
 
-
 interface NewsCardProps {
   news: NewsItem;
   isMain?: boolean;

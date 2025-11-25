@@ -109,6 +109,7 @@ const DownloadSection: React.FC = () => {
       setErrors((prevErrors) => ({ ...prevErrors, content: contentError }));
     } else {
       setErrors({});
+
       // Save comment to the database
       const commentsRef = ref(database, 'comments/');
       const newComment = {
@@ -214,8 +215,7 @@ const DownloadSection: React.FC = () => {
                   </div>
                 )}
 
-                {/* Step 2: Comment */}
-                            {/* Step 2: Comment */}
+          {/* Step 2: Comment */}
             {step === 2 && (
               <div className="text-white">
                 <textarea
@@ -247,80 +247,80 @@ const DownloadSection: React.FC = () => {
               </div>
             )}
 
-            {/* Step 3: Confirmation */}
+          {/* Step 3: Confirmation */}
             {step === 3 && (
-  <div className="font-montserrat">
-    {/* Comment Added Checkbox */}
-    <p className='font-semibold text-xl p-1 text-white/80'>  - Comment added successfully!</p>
-  
+              <div className="font-montserrat">
+                {/* Comment Added Checkbox */}
+                <p className='font-semibold text-xl p-1 text-white/80'>  - Comment added successfully!</p>
+              
 
-    {/* Support Developer Section */}
-    <p className='font-semibold text-xl p-1 text-white/80'>- Support the developer</p>
+                {/* Support Developer Section */}
+                <p className='font-semibold text-xl p-1 text-white/80'>- Support the developer</p>
 
-    <div className="flex items-center ml-10 my-2">
-      <input
-        type="checkbox"
-        checked={isGitHubFollowed}
-        onChange={handleGitHubClick}
-       
-          className="Download-checkbox"
-  />
-      <label onClick={handleGitHubClick} className="text-blue-500 cursor-pointer">
-        Follow on GitHub
-      </label>
-    </div>
-  
-    
-    <div className="flex items-center mb-4 ml-10">
-      <input
-        type="checkbox"
-        checked={isLinkedInFollowed}
-        onChange={handleLinkedInClick}
-       
-        className="Download-checkbox"
-      />
-      <label onClick={handleLinkedInClick} className="text-blue-500 cursor-pointer">
-        Follow on LinkedIn
-      </label>
-    </div>
+                <div className="flex items-center ml-10 my-2">
+                  <input
+                    type="checkbox"
+                    checked={isGitHubFollowed}
+                    onChange={handleGitHubClick}
+                  
+                      className="Download-checkbox"
+              />
+                  <label onClick={handleGitHubClick} className="text-blue-500 cursor-pointer">
+                    Follow on GitHub
+                  </label>
+                </div>
+              
+                
+                <div className="flex items-center mb-4 ml-10">
+                  <input
+                    type="checkbox"
+                    checked={isLinkedInFollowed}
+                    onChange={handleLinkedInClick}
+                  
+                    className="Download-checkbox"
+                  />
+                  <label onClick={handleLinkedInClick} className="text-blue-500 cursor-pointer">
+                    Follow on LinkedIn
+                  </label>
+                </div>
 
-    {/* Terms Agreement Checkbox */}
-    <div className="flex items-center ml-5 text-white/80">
-      <input
-        type="checkbox"
-        checked={isAgreed}
-        onChange={handleTermsChange}
-        className="mr-2 h-4 w-4"
-      />
-     <label htmlFor="terms">
-  I agree to the{" "}
-  <a
-    href="https://ward21.info.gf/Terms"
-    target="_blank"
-    rel="noopener noreferrer"
-    className='text-blue-500'
-  >
-    terms and conditions
-  </a>
-</label>
-    </div>
+                {/* Terms Agreement Checkbox */}
+                <div className="flex items-center ml-5 text-white/80">
+                  <input
+                    type="checkbox"
+                    checked={isAgreed}
+                    onChange={handleTermsChange}
+                    className="mr-2 h-4 w-4"
+                  />
+                <label htmlFor="terms">
+                  I agree to the{" "}
+                  <a
+                    href="https://ward21.info.gf/Terms"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='text-blue-500'
+                  >
+                    terms and conditions
+                  </a>
+                </label>
+                </div>
 
-    {/* Download Button */}
-    <div className="flex justify-end">
-    <button
-      onClick={handleDownloadClick}
-      className={` px-4 py-2 rounded font-semibold text-xl m-4 ${
-        isAgreed && isGitHubFollowed && isLinkedInFollowed
-          ? 'bg-blue-500 text-white'
-          : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-      }`}
-      disabled={!isAgreed || !isGitHubFollowed || !isLinkedInFollowed}
-    >
-      DOWNLOAD
-    </button>
-    </div>
-  </div>
-)}
+                {/* Download Button */}
+                <div className="flex justify-end">
+                  <button
+                    onClick={handleDownloadClick}
+                    className={` px-4 py-2 rounded font-semibold text-xl m-4 ${
+                      isAgreed && isGitHubFollowed && isLinkedInFollowed
+                        ? 'bg-blue-500 text-white'
+                        : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    }`}
+                    disabled={!isAgreed || !isGitHubFollowed || !isLinkedInFollowed}
+                  >
+                    DOWNLOAD
+                  </button>
+                </div>
+              </div>
+            )}
 
           </motion.div>
         )}

@@ -17,6 +17,11 @@ export const CREDITS_INFO: creditsINFO[] = [
    { id: 18, Name: "Yasitha Dulaj", Position: "Video Editor" },
    { id: 19, Name: "Yasitha Dulaj", Position: "Sound Designer & Composer" },
    { id: 20, Name: "play.ht", Position: "Voice Actor" },
-   { id: 21, Name: "Suno AI", Position: "Music" },
+   { id: 21, Name: "Suno AI", Position: "Music"
+
+    },
    { id: 22, Name: "Yasitha Dulaj", Position: "Logo Designer" },
 ];
+
+
+

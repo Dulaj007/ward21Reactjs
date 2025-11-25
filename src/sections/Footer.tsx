@@ -21,7 +21,7 @@ const Footer: React.FC<NavProps> = ({ setActivePage }) => {
               // reference to each id in the navlinks array
               <li key={item.id} className="hover:text-blue-500 dark:hover:text-blue-400">
                 <Link
-                  to={`/${item.id}`} // Adjust routing based on your app's routes
+                  to={`/${item.id}`} 
                   onClick={() => {
                     if (['news', 'game_info', 'credits', 'dev'].includes(item.id)) {
                       setActivePage(item.id as 'news' | 'game_info' | 'credits' | 'dev');
@@ -43,7 +43,7 @@ const Footer: React.FC<NavProps> = ({ setActivePage }) => {
           <ul className="space-y-1">
             <li>
               <Link
-                to="/Report_Bugs" // Adjust route if necessary
+                to="/Report_Bugs" 
                 className="hover:text-blue-500 dark:hover:text-blue-400"
                 onClick={() => setActivePage('Report_Bugs')}
               >
@@ -52,7 +52,7 @@ const Footer: React.FC<NavProps> = ({ setActivePage }) => {
             </li>
             <li>
               <Link
-                to="/DMCA" // Adjust route if necessary
+                to="/DMCA" 
                 className="hover:text-blue-500 dark:hover:text-blue-400"
                 onClick={() => setActivePage('DMCA')}
               >
@@ -70,7 +70,7 @@ const Footer: React.FC<NavProps> = ({ setActivePage }) => {
             </li>
             <li>
               <Link
-                to="/Terms" // Adjust route if necessary
+                to="/Terms" 
                 className="hover:text-blue-500 dark:hover:text-blue-400"
                 onClick={() => setActivePage('Terms')}
               >

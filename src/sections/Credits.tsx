@@ -13,8 +13,8 @@ const Credits: React.FC = () => {
         {CREDITS_INFO.map((dev: creditsINFO) => (
            
           <div key={dev.id} className="w-full flex justify-between items-center py-2">
-            {/* Name aligned to the right */}
             
+            {/* Name aligned to the right */}
             <div className="text-right flex-1 pr-2"><Fade direction="left" duration={1000}>
             <h3 className="text-md max-sm:text-md  font-bold text-black dark:text-white">{dev.Position}</h3></Fade>
             </div>
@@ -26,12 +26,13 @@ const Credits: React.FC = () => {
           </div>
         ))}
       </div>
-      <div>
-      <Fade direction="down" duration={1000}>
-      <h2 className="text-3xl pt-10 font-bold text-center text-black dark:text-white">
-      Special Thanks
-      </h2>
-      <Fade direction="down" duration={1000}>
+        <div>
+            <Fade direction="down" duration={1000}>
+            <h2 className="text-3xl pt-10 font-bold text-center text-black dark:text-white">
+            Special Thanks
+            </h2>
+
+              <Fade direction="down" duration={1000}>
               <p className="text-gray-500 dark:text-gray-400 text-md max-sm:text-sm text-center">
               We would like to extend our heartfelt gratitude to User1 Productions (YouTube) for inspiring and teaching us, 
               <br></br>enabling this project to come to life. Your guidance has been invaluable in our journey.  
@@ -40,8 +41,8 @@ const Credits: React.FC = () => {
                 <Fade direction="down" duration={1000}>
               <p className="text-gray-500 dark:text-gray-400 text-md max-sm:text-sm text-center py-2">
            
-A special thanks to Lukas Bobor, Studio New Punch, and Tensori on the Unity Asset Store for providing free 3D models.
-<br></br> Without their generosity and creativity, this project would not have been possible.  
+                A special thanks to Lukas Bobor, Studio New Punch, and Tensori on the Unity Asset Store for providing free 3D models.
+                <br></br> Without their generosity and creativity, this project would not have been possible.  
                 </p></Fade>
 
                 <Fade direction="down" duration={1000}>
@@ -54,11 +55,10 @@ A special thanks to Lukas Bobor, Studio New Punch, and Tensori on the Unity Asse
               <p className="text-gray-500 dark:text-gray-400 text-md max-sm:text-sm text-center py-2">
               There are so many talented designers whose 3D models have been used in this game. 
               <br></br>We have listed all the credits here. support these incredible artists.
- 
-                </p></Fade>
+              </p></Fade>
 
-      </Fade>
-      </div>
+            </Fade>
+        </div>
     </div>
   );
 }

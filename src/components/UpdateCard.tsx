@@ -7,10 +7,7 @@ import { Link } from 'react-router-dom';
 
 interface NewsCardProps {
   news: NewsItem;
- 
 }
-
-
 const UpdateCard: React.FC<NewsCardProps> = ({ news }) => {
   return (
     <Fade direction="up" duration={1000}>
@@ -24,31 +21,28 @@ const UpdateCard: React.FC<NewsCardProps> = ({ news }) => {
           alt={news.title}
           className="absolute inset-0 w-full h-full ml-5 mt-5 "
         />
- <div className="ml-65 absolute p-2 mt-7 w-20 rounded-3xl h-10 inset-0 border-2 border-white bg-black/50 backdrop-blur-3xl flex flex-col justify-end ">
+      <div className="ml-65 absolute p-2 mt-7 w-20 rounded-3xl h-10 inset-0 border-2 border-white bg-black/50 backdrop-blur-3xl flex flex-col justify-end ">
+        <p className="text-sm text-white uppercase font-montserrat font-semibold">UPDATE</p>
+      </div>
 
- <p className="text-sm text-white uppercase font-montserrat font-semibold">
-          UPDATE
-          </p>
- </div>
         {/* Blur Overlay */}
         <div className='ml-75 absolute mt-54 z-12'>
           <button className="absolute w-15 bottom-10">
-          <Lottie animationData={SwipeRight} loop={true}  />
+          <Lottie animationData={SwipeRight} loop={true} />
           </button>
-        
-       
         </div>
+
         <div className="ml-10 absolute mt-30 w-85 h-20 inset-0 border-2 border-white bg-black/50 backdrop-blur-3xl flex flex-col justify-end p-4 ">
           <h2 className="text-xl font-bold text-[var(--yellow)] uppercase font-montserrat mt-5">
             {news.title}
           </h2>
           <p className="text-sm text-white/90 font-semibold uppercase font-montserrat">
             {new Date(news.date).toLocaleDateString()}
-          
           </p>
 
         </div>
-      </div></Link>
+      </div>
+      </Link>
       </div>
     </Fade>
   );

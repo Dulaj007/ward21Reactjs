@@ -51,6 +51,6 @@ export interface Screenshot {
     { src: image18, alt: 'Screenshot 5' },
     { src: image9, alt: 'Screenshot 5' },
     { src: image10, alt: 'Screenshot 5' },
-    // Add more images as needed
+
   ];
   

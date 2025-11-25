@@ -6,8 +6,6 @@ export interface devINFO {
     Insta:string;
     linkedin:string;
     facebook:string;
-
-   
   }
 export const DEV_INFO = [
     { 
